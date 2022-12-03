@@ -4,7 +4,7 @@ import java.util.List;
 
 public class solution{
     public static void main(String []args) throws Exception{
-        String path = "day01/input.txt";
+        String path = "input.txt";
         try(BufferedReader in = new BufferedReader(new FileReader(path))){
             var list = in.lines().toList();
             var map = new HashMap<Integer, Integer>();

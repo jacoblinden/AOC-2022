@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 import static java.lang.System.getenv;
 
 public class solution{
-        public void main(String[] args) throws Exception {
+        public static void main(String[] args) throws Exception {
             final Stream<String> lines = Files.lines(Path.of("input.txt"));
             System.out.println("part2".equalsIgnoreCase(getenv("part")) ? task1(lines) : task2(lines));
         }
@@ -28,7 +28,7 @@ public class solution{
                 return  map.values().stream().sorted((x,z)-> z-x ).toList();
         }
 
-        int task1(Stream<String> lines) {
+        static int task1(Stream<String> lines) {
            return (solve(lines).get(0));
         }
 

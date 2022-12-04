@@ -40,13 +40,12 @@ public enum Move {
         return match(toMake, m);
     }
 
-
     public  static Move of(String s){
         return switch (s){
             case "A","X" -> ROCK;
             case "B","Y" -> PAPER;
             case "C","Z" -> SCISSOR;
-            default -> throw new IllegalArgumentException();
+            default -> throw new IllegalArgumentException(s);
         };
     };
 }

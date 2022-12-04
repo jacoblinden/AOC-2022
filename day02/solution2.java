@@ -18,7 +18,7 @@ public class solution2{
         }
 
         int task2(Stream<String> lines) {
-            return lines.map(s -> {
+            return lines.parallel().map(s -> {
                     var moves = s.split(" ");
                     return Move.rigged(Move.of(moves[0]), moves[1]);
                 }).reduce(Integer::sum).get();

@@ -11,7 +11,7 @@ import static java.lang.System.getenv;
 public class solution7 {
 
     public static void main(String []args) throws Exception {
-        final Stream<String> line = Files.lines(Path.of("day07/input.txt"));
+        final Stream<String> line = Files.lines(Path.of("input.txt"));
         System.out.println("part2".equalsIgnoreCase(getenv("part")) ?
                 part2(line) :
                 part1(line));
